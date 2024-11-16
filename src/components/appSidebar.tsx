@@ -22,14 +22,14 @@ const data = {
       url: '/about-me',
       items: [
         { title: 'Who am I', url: '/about-me' },
-        { title: 'My Project Works', url: '#' },
+        { title: 'My Project Works', url: '/projects' },
       ],
     },
     {
       title: 'My Explorations',
-      url: '#',
+      url: '/exploration',
       items: [
-        { title: 'Rich text editor', url: '#' },
+        { title: 'Rich text editor', url: '/exploration/rich-text-editor' },
         { title: 'Data Fetching', url: '#', isActive: true },
         { title: 'Rendering', url: '#' },
         { title: 'Caching', url: '#' },
@@ -37,9 +37,12 @@ const data = {
     },
     {
       title: 'Documentations',
-      url: '#',
+      url: '/documentations',
       items: [
-        { title: 'Next.js project deploy', url: '#' },
+        {
+          title: 'Next.js project deploy',
+          url: '/documentations/next-js-deploy',
+        },
         { title: 'File Conventions', url: '#' },
       ],
     },
