@@ -18,9 +18,9 @@ if yarn lint; then
         exit 1
     fi
 
-    # Proceed to build if no changes
-    echo "${GREEN}✅ No format changes. Proceeding to build...${NC}"
-    yarn build
+    # # Proceed to build if no changes
+    # echo "${GREEN}✅ No format changes. Proceeding to build...${NC}"
+    # yarn build
 else
     echo "${YELLOW}⚠️ Lint issues found! Running format and lint:fix...${NC}"
     yarn format && yarn lint:fix
