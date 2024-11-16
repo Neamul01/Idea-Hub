@@ -1,0 +1,32 @@
+echo "🔍 Checking commit message using commitlint..."
+
+# Run commitlint and directly exit if it fails
+npx --no-install commitlint --edit || {
+    echo ""
+    echo "❌ Commit message validation failed. Please follow the commit message guidelines."
+    echo ""
+    echo "📄 Example of a valid commit message:"
+    echo "---------------------------------------------------"
+    echo "feat: add Husky hooks for commit message and pre-push scripts"
+    echo ""
+    echo "    - Add '.husky/commit-msg' script to run 'commitlint' for validating commit messages"
+    echo "    - Update '.husky/pre-push' script to run 'lint' before pushing changes"
+    echo ""
+    echo "Update 'package.json':"
+    echo "    - Add '@commitlint/cli' and '@commitlint/config-conventional' as devDependencies"
+    echo "    - Add 'husky' as a devDependency and run 'prepare' script to set up hooks"
+    echo "Add '.commitlintrc.json':"
+    echo "    - Use 'conventional-changelog-conventionalcommits' preset"
+    echo ""
+    echo "Issue #123"
+    echo "---------------------------------------------------"
+    echo ""
+    echo "📄 Commit message format: <type>(<optional scope>): <subject>"
+    echo ""
+    echo "Valid types: feat, fix, docs, style, refactor, perf, test, chore, revert"
+    echo "For more information, visit: https://github.com/conventional-changelog/commitlint/#what-is-commitlint"
+    exit 1
+}
+
+echo "✅ Commit message passed validation!"
+npx --no -- commitlint --edit "$1"
