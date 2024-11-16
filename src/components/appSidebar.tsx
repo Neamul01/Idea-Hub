@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { GalleryVerticalEnd } from "lucide-react";
 
 import {
@@ -45,7 +46,7 @@ const data = {
   ],
 };
 
-export function AppSidebar() {
+export const AppSidebar = () => {
   return (
     <Sidebar>
       <SidebarHeader>
