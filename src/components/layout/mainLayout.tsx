@@ -1,3 +1,9 @@
+'use client';
+
+import React from 'react';
+
+import Link from 'next/link';
+
 import { AppSidebar } from '@/components/appSidebar';
 import {
   Breadcrumb,
@@ -13,8 +19,20 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from '@/components/ui/sidebar';
+import { useActiveRoute } from '@/hooks/useActiveRoute';
+
+const getBreadcrumbs = (pathname: string) => {
+  const paths = pathname.split('/').filter(Boolean);
+  return paths.map((path, index) => {
+    const url = `/${paths.slice(0, index + 1).join('/')}`;
+    return { name: path.charAt(0).toUpperCase() + path.slice(1), url };
+  });
+};
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
+  const { pathname } = useActiveRoute();
+  const breadcrumbs = getBreadcrumbs(pathname);
+
   return (
     <SidebarProvider>
       <AppSidebar />
@@ -24,13 +42,27 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
           <Separator orientation="vertical" className="mr-2 h-4" />
           <Breadcrumb>
             <BreadcrumbList>
-              <BreadcrumbItem className="hidden md:block">
-                <BreadcrumbLink href="#">Idea Hub</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="hidden md:block" />
               <BreadcrumbItem>
-                <BreadcrumbPage>About-me</BreadcrumbPage>
+                <Link href="/" passHref legacyBehavior>
+                  <BreadcrumbLink href="/">Idea Hub</BreadcrumbLink>
+                </Link>
               </BreadcrumbItem>
+              {breadcrumbs.map((crumb, index) => (
+                <React.Fragment key={crumb.url}>
+                  <BreadcrumbSeparator />
+                  <BreadcrumbItem>
+                    {index === breadcrumbs.length - 1 ? (
+                      <BreadcrumbPage>{crumb.name}</BreadcrumbPage>
+                    ) : (
+                      <Link href={crumb.url} passHref legacyBehavior>
+                        <BreadcrumbLink href={crumb.url}>
+                          {crumb.name}
+                        </BreadcrumbLink>
+                      </Link>
+                    )}
+                  </BreadcrumbItem>
+                </React.Fragment>
+              ))}
             </BreadcrumbList>
           </Breadcrumb>
         </header>
