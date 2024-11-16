@@ -4,13 +4,13 @@ import { Separator } from '@/components/ui/separator';
 
 const Footer = () => {
   return (
-    <footer className="flex h-10 items-center bg-background">
+    <footer className="flex items-center bg-background py-2">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex flex-col items-center gap-2 md:flex-row">
             <Link
               href="/"
-              className="bg-gradient-to-r from-primary-200 to-secondary-200 bg-clip-text font-semibold text-transparent"
+              className="from-primary-200 to-secondary-200 bg-gradient-to-r bg-clip-text font-semibold text-transparent"
             >
               Idea Hub
             </Link>
