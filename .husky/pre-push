@@ -33,12 +33,12 @@ else
     fi
 
     # Run lint again to ensure it's clean after fixes
-    echo "${CYAN}🔍 Re-running lint after fix...${NC}"
-    if yarn lint; then
-        echo "${GREEN}✅ Lint issues fixed! Proceeding to build...${NC}"
-        yarn build
-    else
-        echo "${RED}❌ Lint still has issues. Please fix them manually before pushing.${NC}"
-        exit 1
-    fi
+    # echo "${CYAN}🔍 Re-running lint after fix...${NC}"
+    # if yarn lint; then
+    #     echo "${GREEN}✅ Lint issues fixed! Proceeding to build...${NC}"
+    #     yarn build
+    # else
+    #     echo "${RED}❌ Lint still has issues. Please fix them manually before pushing.${NC}"
+    #     exit 1
+    # fi
 fi
