@@ -6,39 +6,39 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No color
 
 # Run lint
-echo "${CYAN}🔍 Running lint...${NC}"
+echo -e "${CYAN}🔍 Running lint...${NC}"
 if yarn lint; then
-    echo "${GREEN}✅ Lint passed! Checking for format changes...${NC}"
+    echo -e "${GREEN}✅ Lint passed! Checking for format changes...${NC}"
 
     # Run format and check if files were modified
     yarn format
     if [ -n "$(git status --porcelain)" ]; then
-        echo "${RED}❌ Some files were modified by 'yarn format'.${NC}"
-        echo "${YELLOW}Please review the changes, commit them, and push again.${NC}"
+        echo -e "${RED}❌ Some files were modified by 'yarn format'.${NC}"
+        echo -e "${YELLOW}Please review the changes, commit them, and push again.${NC}"
         exit 1
     fi
 
     # # Proceed to build if no changes
-    # echo "${GREEN}✅ No format changes. Proceeding to build...${NC}"
+    # echo -e "${GREEN}✅ No format changes. Proceeding to build...${NC}"
     # yarn build
 else
-    echo "${YELLOW}⚠️ Lint issues found! Running format and lint:fix...${NC}"
+    echo -e "${YELLOW}⚠️ Lint issues found! Running format and lint:fix...${NC}"
     yarn format && yarn lint:fix
 
     # Check if any files were modified after format and lint:fix
     if [ -n "$(git status --porcelain)" ]; then
-        echo "${RED}❌ Some files were modified by 'yarn format' and 'yarn lint:fix'.${NC}"
-        echo "${YELLOW}Please review the changes, commit them, and push again.${NC}"
+        echo -e "${RED}❌ Some files were modified by 'yarn format' and 'yarn lint:fix'.${NC}"
+        echo -e "${YELLOW}Please review the changes, commit them, and push again.${NC}"
         exit 1
     fi
 
     # Run lint again to ensure it's clean after fixes
-    # echo "${CYAN}🔍 Re-running lint after fix...${NC}"
+    # echo -e "${CYAN}🔍 Re-running lint after fix...${NC}"
     # if yarn lint; then
-    #     echo "${GREEN}✅ Lint issues fixed! Proceeding to build...${NC}"
+    #     echo -e "${GREEN}✅ Lint issues fixed! Proceeding to build...${NC}"
     #     yarn build
     # else
-    #     echo "${RED}❌ Lint still has issues. Please fix them manually before pushing.${NC}"
+    #     echo -e "${RED}❌ Lint still has issues. Please fix them manually before pushing.${NC}"
     #     exit 1
     # fi
 fi
