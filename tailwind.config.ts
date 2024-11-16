@@ -23,10 +23,12 @@ export default {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+          '200': '#2563eb',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
+          '200': '#9333ea',
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
@@ -39,6 +41,7 @@ export default {
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
+          '200': '#db2777',
         },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

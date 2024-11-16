@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="animate-fade-in max-w-4xl space-y-8">
         <div className="space-y-4">
           <h1 className="text-5xl font-bold md:text-7xl">
-            <span className="animate-gradient bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="animate-gradient from-secondary-200 via-destructive-200 to-primary-200 bg-gradient-to-r bg-clip-text text-transparent">
               Neamul Haque
             </span>
           </h1>
