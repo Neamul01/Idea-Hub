@@ -63,7 +63,7 @@ export const AppSidebar = () => {
           <SidebarMenuItem>
             <Link href="/" passHref legacyBehavior>
               <SidebarMenuButton size="lg">
-                <div className="from-primary-200/80 to-secondary-200/80 flex aspect-square size-8 items-center justify-center rounded-lg bg-gradient-to-br text-sidebar-primary-foreground">
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary-200/80 to-secondary-200/80 text-sidebar-primary-foreground">
                   <GalleryVerticalEnd className="size-4" />
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
@@ -91,7 +91,7 @@ export const AppSidebar = () => {
                       <SidebarMenuButton
                         asChild
                         isActive={isActiveNav(subItem.url)}
-                        className="data-[active=true]:border-secondary-200/30 from-secondary-200/80 to-primary-200/80 data-[active=true]:border data-[active=true]:bg-gradient-to-bl data-[active=true]:text-white"
+                        className="from-secondary-200/80 to-primary-200/80 data-[active=true]:border data-[active=true]:border-secondary-200/30 data-[active=true]:bg-gradient-to-bl data-[active=true]:text-white"
                       >
                         <a>{subItem.title}</a>
                       </SidebarMenuButton>
