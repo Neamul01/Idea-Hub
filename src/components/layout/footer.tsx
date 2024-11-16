@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex flex-col items-center gap-2 md:flex-row">
             <Link
               href="/"
-              className="from-primary-200 to-secondary-200 bg-gradient-to-r bg-clip-text font-semibold text-transparent"
+              className="bg-gradient-to-r from-primary-200 to-secondary-200 bg-clip-text font-semibold text-transparent"
             >
               Idea Hub
             </Link>

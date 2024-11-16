@@ -28,4 +28,8 @@ npx --no-install commitlint --edit || {
     exit 1
 }
 
+# Run 'yarn format' regardless of commitlint result
+echo "✨ Running 'yarn format'..."
+yarn format
+
 echo "✅ Commit message passed validation!"
