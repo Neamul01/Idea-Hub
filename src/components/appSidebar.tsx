@@ -1,6 +1,5 @@
-import * as React from 'react';
-
-import { GalleryVerticalEnd } from 'lucide-react';
+import * as React from "react";
+import { GalleryVerticalEnd } from "lucide-react";
 
 import {
   Sidebar,
@@ -13,34 +12,34 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
-} from '@/components/ui/sidebar';
+} from "@/components/ui/sidebar";
 
 const data = {
   navMain: [
     {
-      title: 'Getting Started',
-      url: '#',
+      title: "Getting Started",
+      url: "#",
       items: [
-        { title: 'Installation', url: '#' },
-        { title: 'Project Structure', url: '#' },
+        { title: "Installation", url: "#" },
+        { title: "Project Structure", url: "#" },
       ],
     },
     {
-      title: 'Building Your Application',
-      url: '#',
+      title: "Building Your Application",
+      url: "#",
       items: [
-        { title: 'Routing', url: '#' },
-        { title: 'Data Fetching', url: '#', isActive: true },
-        { title: 'Rendering', url: '#' },
-        { title: 'Caching', url: '#' },
+        { title: "Routing", url: "#" },
+        { title: "Data Fetching", url: "#", isActive: true },
+        { title: "Rendering", url: "#" },
+        { title: "Caching", url: "#" },
       ],
     },
     {
-      title: 'API Reference',
-      url: '#',
+      title: "API Reference",
+      url: "#",
       items: [
-        { title: 'Components', url: '#' },
-        { title: 'File Conventions', url: '#' },
+        { title: "Components", url: "#" },
+        { title: "File Conventions", url: "#" },
       ],
     },
   ],
