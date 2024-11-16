@@ -18,28 +18,28 @@ import {
 const data = {
   navMain: [
     {
-      title: 'Getting Started',
-      url: '#',
+      title: 'About Me',
+      url: '/about-me',
       items: [
-        { title: 'Installation', url: '#' },
-        { title: 'Project Structure', url: '#' },
+        { title: 'Who am I', url: '/about-me' },
+        { title: 'My Project Works', url: '#' },
       ],
     },
     {
-      title: 'Building Your Application',
+      title: 'My Explorations',
       url: '#',
       items: [
-        { title: 'Routing', url: '#' },
+        { title: 'Rich text editor', url: '#' },
         { title: 'Data Fetching', url: '#', isActive: true },
         { title: 'Rendering', url: '#' },
         { title: 'Caching', url: '#' },
       ],
     },
     {
-      title: 'API Reference',
+      title: 'Documentations',
       url: '#',
       items: [
-        { title: 'Components', url: '#' },
+        { title: 'Next.js project deploy', url: '#' },
         { title: 'File Conventions', url: '#' },
       ],
     },
@@ -57,8 +57,8 @@ export const AppSidebar = () => {
                 <GalleryVerticalEnd className="size-4" />
               </div>
               <div className="flex flex-col gap-0.5 leading-none">
-                <span className="font-semibold">Documentation</span>
-                <span className="">v1.0.0</span>
+                <span className="font-semibold">Idea Hub</span>
+                <span className="">v0.0.1</span>
               </div>
             </SidebarMenuButton>
           </SidebarMenuItem>
